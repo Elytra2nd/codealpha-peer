@@ -4,9 +4,9 @@ import cors from 'cors'
 import { createServer } from 'http'
 import { Server } from 'socket.io'
 import { PrismaClient } from '@prisma/client'
-import { createSocketHandlers } from './sockets'
-import authRouter from './routes/auth'
-import roomRouter from './routes/room'
+import { createSocketHandlers } from './sockets/index.js'
+import authRouter from './routes/auth.js'
+import roomRouter from './routes/room.js'
 
 const app = express()
 app.use(cors())
